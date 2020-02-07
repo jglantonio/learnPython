@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mydb:
+    image: postgres:10
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=myodoo
+      - POSTGRES_USER=odoo
+  web:
+    image: odoo:12.0
+    depends_on:
+      - mydb
+    ports:
+      - "8069:8069"
+    environment:
+      - HOST=mydb
+      - USER=odoo
+      - PASSWORD=myodoo
+  api:
+    build: ./
+    depends_on:
+      - mydb
+      - web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./servicio/src:/var/www/html/
