@@ -86,5 +86,8 @@ print(setAnimales)
 
 ## Diccionarios
 
-Los diccionarios, son un par de clave y valor. Es como un array con claves de PHP. Pero se comporta acomo si fuera un obejto de Javascript. Soporta **not** y **in**
+Los diccionarios, son un par de clave y valor. Es como un array con claves de PHP. Pero se comporta acomo si fuera un obejto de Javascript. Soporta **not** y **in**. Las claves usadas en los diccionarios son **inmmutables**, los elementos **inmutables son** por ejemplo, el **int**, **string**, **float**.
 
+```python
+elements = {"hydrogen": 1, "helium": 2, "carbon": 6}
+```
