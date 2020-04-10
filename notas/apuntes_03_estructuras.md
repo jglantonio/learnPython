@@ -1,45 +1,77 @@
 # Estructuras de datos
-## Las listas. 
-Las lista de elementos, son arrays. 
+## Los arrays. 
+Las lista de elementos, son arrays, será el nombre usado, para referirnos a
+estos elementos. 
+```python
+months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio',"Julio","Agosto","Octubre","Septiembre","Noviembre","Diciembre"]
+```
+### Posiciones en un array
+Los arrays en python parten de la posición en cero por consiguiente podemos 
+acceder alcontenido señalando la posición en (1-n), siendo n la posición a la 
+que queremos acceder, por ejemplo si accedemos a n = 1 , la posición será la 0.
 ```python
 months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio']
+months[3]="JOJO" # ['Enero', 'Febrero', 'Marzo', 'JOJO', 'Mayo', 'Junio']
+print(months[0]) # Enero
+print(months[3]) # JOJOJO
 ```
+### Mutable y ordenable
+En esta parte ya entramos en el campo de que los arrays son **mutables**, lo 
+que quiere decir que son modificables una vez que son creados y en caso 
+contrario de que no se puedan modificar una vez creados se consideran
+ **inmutables**. 
+Por otra parte es un objeto **ordenable** que significa que es un objeto en el que
+podemos acceder directamente al valor señalando su posición.
+
+### Igualar contenido
+Cabe destacar que cuando igualamos una variable a otra respeto a los arrays en 
+Python no estamos creando dos variables iguales haciendo referencia a dos 
+elementos distintos, de forma independiente, sino que son dos variables 
+apuntando al mismo contenido.
+Si sabemos algo de C, del que parten los lenguajes más grandes que hay en el 
+mundo del desarrollo. Trabaja con posiciones de memoria. Las variables 
+apuntan a posiciones de memoria que almacenan dicho contenido, por 
+consiguiente, cuando nosotros en Python igualamos dos variables estamos 
+apuntando esas variables a la misma posición de memoria.
+```PHP
+$listaUna = $listaDos = ["hola","que","tal"];
+$listaUna = [];
+var_dump($listaUno,$listaDos);
+// [],["hola","que","tal"]
+```
+Por otra parte
+```PHP
+$listaUna = ["hola","que","tal"];
+$listaDos = &$listaUna ; 
+$listaDos = []
+var_dump($listaUno,$listaDos);
+// [],[]
+```
+En Python es lo mismo.
+
 ### Formas de trabajar con listas o arrays
 Podemos trabajar de distintas maneras, por ejemplo: 
 ```python
-months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio']
+months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio',"Julio","Agosto","Octubre","Septiembre","Noviembre","Diciembre"]
 print(months[1]) # Febraro
 ```
 Por otra parte : 
 ```python
-months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio']
-print(months[-1]) # Junio
+months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio',"Julio","Agosto","Octubre","Septiembre","Noviembre","Diciembre"]
+print(months[-1]) # Diciembre
 ```
+### Slice, o coger parte del array e introducirlo en otro
 Podemos *sustraer* por llamarlo así, parte de un array, ejemplo : 
 ```python
-months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio']
+months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio',"Julio","Agosto","Octubre","Septiembre","Noviembre","Diciembre"]
 print(months[0:2]) # ['Enero', 'Febrero']
 ```
 También podemos preguntar si existe un elemento en una array, coomo en php con
 la función `in_array`, con las palabras `in` y `not in`, ejemplo :
 ```python
-months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio']
-print('Diciembre' in months) # False
-print('Enero' not in months) # True
-```
-### Mutabilidad y ordenable
-
-Podemos modificar los arrays si hacemos referencia a su posición en él. Tenemos
-que los arrays son **mutables**, lo que quiere decir que son modificables una vez
-que son creados y en caso contrario de que no se puedan modificar una vez creados
-se consideran **inmutables**. 
-Por otra parte es un objeto **ordenable** que significa que es un objeto en el que
-podemos acceder directamente al valor señalando su posición.
-
-```python
-months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio']
-months[3]="JOJO" # ['Enero', 'Febrero', 'Marzo', 'JOJO', 'Mayo', 'Junio']
-print(months[0]) # Enero
+months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio',"Julio","Agosto","Octubre","Septiembre","Noviembre","Diciembre"]
+print('Diciembre' in months) # True
+print('Xamaín' not in months) # True
 ```
 
 ### Funciones útiles
@@ -86,8 +118,12 @@ print(setAnimales)
 
 ## Diccionarios
 
-Los diccionarios, son un par de clave y valor. Es como un array con claves de PHP. Pero se comporta acomo si fuera un obejto de Javascript. Soporta **not** y **in**. Las claves usadas en los diccionarios son **inmmutables**, los elementos **inmutables son** por ejemplo, el **int**, **string**, **float**.
+Los diccionarios, son un par de clave y valor. Es como un array con claves de PHP.
+Pero se comporta como si fuera un obejto de Javascript. Soporta **not** y **in**. 
+Las claves usadas en los diccionarios son **inmmutables**, los elementos
+ **inmutables son** por ejemplo, el **int**, **string**, **float**.
 
 ```python
 elements = {"hydrogen": 1, "helium": 2, "carbon": 6}
 ```
+
