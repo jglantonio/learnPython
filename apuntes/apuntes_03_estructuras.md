@@ -126,4 +126,14 @@ Las claves usadas en los diccionarios son **inmmutables**, los elementos
 ```python
 elements = {"hydrogen": 1, "helium": 2, "carbon": 6}
 ```
-
+## `title`
+La función `title` lo que hace es poner el nombre capitalizado.
+Otras funciones para strings :
+```python
+    lista = ['perro','gato','conejo']
+    for elemento in lista :
+        print(elemento.title())
+    # Perro
+    # Gato
+    # Conejo
+```

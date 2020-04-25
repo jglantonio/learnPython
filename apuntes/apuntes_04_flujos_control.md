@@ -30,7 +30,8 @@ else :
 ```
 # Puertas lógicas
 
-Como pudimos ver como desarrollar un `if` en estas condiciones podemos meter puertas lógicas. Hay que tener los siguientes tips en cuenta : 
+Como pudimos ver como desarrollar un `if` en estas condiciones podemos meter puertas lógicas. Hay que tener los 
+siguientes tips en cuenta : 
 * En el caso de Python, no se definen como en PHP, con un `&&` y `||` sinó como son `and` y `or`
 * No hace falta igualar a `true` los valores booleanos.
 * Trata todos los valores como `true` que no sea `false`.
@@ -59,13 +60,13 @@ Python tiene dos tipos de bucles `for` y `while`. Puede recorrer elementos itera
     # gato
     # conejo
 ```
-Para generar listas de elementos integeres podemos ejecutar la función `range(inicio,final,salto)`, si queremos establecer del 1 al 10 de uno al uno simplemente `(range(1,11,1)`.
+Para generar listas de elementos integeres podemos ejecutar la función `range(inicio,final,salto)`, si queremos 
+establecer del 1 al 10 de uno al uno simplemente `(range(1,11,1)`.
 ```python
     for elemento in range(1,11,1) :
         print(elemento)
 ```
 ## While
-
 ```python
 lista = ['perro','gato','conejo']
 i = 0
@@ -73,5 +74,7 @@ while i < len(lista) :
    print(lista[i])
    i+=1
 ```
+Tenemos los `break` y `continue`, tanto para los `while` como los `for`. Se pueden usar cuando ya no quieres trabajar 
+más sobre el `while` y quieres parar su ejecución.
 ## Más información
  * [PEP 8 : Guía para programar en Python](https://www.python.org/dev/peps/pep-0008/#tabs-or-spaces)

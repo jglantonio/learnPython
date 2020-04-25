@@ -8,3 +8,5 @@ index = verse.rfind("river",0,longitud)
 print(index)
 veces = verse.count("river")
 print(veces)
+anhos = 10;
+print("Tengo {} años".format(anhos))
